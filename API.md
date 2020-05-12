@@ -1,11 +1,11 @@
 # GP API Documentation
 ## NOTICES
 
-  * 記錄於iParking 頁面上之GP 為中心化的數字，當用戶要兌現成黃金時，才會將GP 上鏈，記錄於區塊鏈
+  * 記錄於iParking / gogogaie 頁面內之GP 為中心化的數字，當用戶要兌現成黃金時，才會將GP 上鏈，記錄於區塊鏈
 
 ## URL
 
-  * API : url will provide late
+  * API : url will provide later
 
 ## Table of Contents
 
@@ -59,7 +59,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | Field           | Required | Type     | Description                                                      |
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
-    | statusCode      | Yes      | Int      | <WILL PROVIDE LATER>                                             |
+    | statusCode      | Yes      | Int      |  |
     | accessToken     | Yes      | String   | access token 用於其它api 呼叫 |
     | expiredTime     | Yes      | Long     | token 過期的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |     
 
@@ -110,7 +110,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | Field           | Required | Type     | Description                                                      |
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
-    | statusCode      | Yes      | Int      | <WILL PROVIDE LATER>                                             |
+    | statusCode      | Yes      | Int      |  |
     | exchangedTokenAmount     | Yes      | Int | 兌換之相對應的GP數量 |
     | currency        | Yes      | String   | GP |
 
