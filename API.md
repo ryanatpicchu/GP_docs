@@ -1,13 +1,11 @@
 # GP API Documentation
 ## NOTICES
 
-  * 
-  * 
+  * 記錄於iParking 頁面上之GP 為中心化的數字，當用戶要兌現成黃金時，才會將GP 上鏈，記錄於區塊鏈
 
 ## URL
 
   * API : url will provide late
-
 
 ## Table of Contents
 
