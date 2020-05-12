@@ -75,7 +75,7 @@ hash_hmac('SHA256',  $message, $secret_key)
  
 ### Exchange
 
-查詢餘額
+用酷幣或記錄於iParking 的"中心化"GP 交換crypto GP。交換成功後，iParking 頁面上的GP 數量會消失，GP數量會在GP App 裡顯示
 
 * **URL**
 
