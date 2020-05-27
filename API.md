@@ -11,6 +11,8 @@
 
 1. [Auth](#auth)
 1. [Exchange](#exchange)
+1. [Balance](#balance)
+1. [Status](#status)
 
 
 ### Auth
@@ -118,5 +120,99 @@ hash_hmac('SHA256',  $message, $secret_key)
 
   ```
   /exchange?hash=663187fac4edbcdff62ea239deacc34719305749201267929e
+  
+  ```
+
+
+### Balance
+
+顯示目前用戶錢包的GP數量
+
+* **URL**
+
+  * /balance
+
+* **Method:**
+
+  `POST`
+  
+* **Request:**
+
+  * **JSON Body** 
+
+    {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e"}
+ 
+ 
+  * **JSON Content:**
+
+    | Field           | Required | Type     | Description                                                      |
+    |:----------------|:---------|:---------|:-----------------------------------------------------------------|
+    | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
+    | partnerId       | Yes      | String   | iparking / gogogaie |
+    | userId          | Yes      | String   | iParking 用戶識別碼，暫定是手機號碼 |
+    | accessToken     | Yes      | String   | API識別碼 |
+    
+
+* **Success Response:**
+
+  * **Content:**
+
+    | Field           | Required | Type     | Description                                                      |
+    |:----------------|:---------|:---------|:-----------------------------------------------------------------|
+    | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
+    | statusCode      | Yes      | Int      |  |
+    | amount          | Yes      | Int | GP數量 |
+
+* **Sample Call:**
+
+  ```
+  /balance?hash=663187fac4edbcdff62ea239deacc34719305749201267929e
+  
+  ```
+
+### Status
+
+查詢交易狀態
+
+* **URL**
+
+  * /status
+
+* **Method:**
+
+  `POST`
+  
+* **Request:**
+
+  * **JSON Body** 
+
+    {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795", "txId":"0x4567ghjkmnb5678u8ubbhhd468nqffqfef", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e"}
+ 
+ 
+  * **JSON Content:**
+
+    | Field           | Required | Type     | Description                                                      |
+    |:----------------|:---------|:---------|:-----------------------------------------------------------------|
+    | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
+    | partnerId       | Yes      | String   | iparking / gogogaie |
+    | userId          | Yes      | String   | iParking 用戶識別碼，暫定是手機號碼 |
+    | txId            | Yes      | String   | 用以查詢交易狀態的唯一值。於exchange 時獲取 |
+    | accessToken     | Yes      | String   | API識別碼 |
+    
+
+* **Success Response:**
+
+  * **Content:**
+
+    | Field           | Required | Type     | Description                                                      |
+    |:----------------|:---------|:---------|:-----------------------------------------------------------------|
+    | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
+    | statusCode      | Yes      | Int      |  |
+    | txStatus        | Yes      | String   | pendding / procesing / success /  |
+
+* **Sample Call:**
+
+  ```
+  /status?hash=663187fac4edbcdff62ea239deacc34719305749201267929e
   
   ```
