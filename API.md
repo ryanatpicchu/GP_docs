@@ -208,7 +208,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
     | statusCode      | Yes      | Int      |  |
-    | txStatus        | Yes      | String   | pendding / procesing / success /  |
+    | txStatus        | Yes      | String   | pending / procesing / success /  |
 
 * **Sample Call:**
 
