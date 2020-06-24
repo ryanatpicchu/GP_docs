@@ -51,8 +51,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
     | partnerId       | Yes      | String   | iparking / gogogaie |
-    | partnerIp       | Yes      | String   | iparking / gogogaie 發出需求的主機IP 位址 (IPv4 或 IPv6) |
-    | userId          | Yes      | String   | iParking 用戶識別碼，暫定是手機號碼 |
+    | userId          | Yes      | String   | iParking 用戶識別碼，一般用戶是手機號碼，企業用戶為統編 |
 
 * **Success Response:**
 
@@ -61,7 +60,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | Field           | Required | Type     | Description                                                      |
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | status          | Yes      | String   | 信息回應狀態說明，如果成功會回傳 "success";如果有其他錯誤，會回傳特定的錯誤信息 |
-    | statusCode      | Yes      | Int      |  |
+    | statusCode      | Yes      | Int      | 0:成功，1:失敗 |
     | accessToken     | Yes      | String   | access token 用於其它api 呼叫 |
     | expiredTime     | Yes      | Long     | token 過期的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |     
 
