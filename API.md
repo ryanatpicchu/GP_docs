@@ -31,12 +31,12 @@
 
   * **JSON Body** 
  
-   {"timestamp":1503383341514, "partnerId":"iparking", "partnerIp":"223.27.48.212", "userId":"886936630795"}
+   {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795"}
    
   * **HASH** 
  
  ```
-$message = '{"timestamp":1503383341514, "partnerId":"iparking", "partnerIp":"223.27.48.212", "userId":"886936630795"}';
+$message = '{"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795"}';
 
 $secret_key = '<WILL PROVIDE LATER>';
 
