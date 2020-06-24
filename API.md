@@ -1,7 +1,7 @@
 # GP API Documentation
 ## NOTICES
 
-  * 記錄於iParking / gogogaie 頁面內之GP 為中心化的數字，當用戶要兌現成黃金時，才會將GP 上鏈，記錄於區塊鏈
+  * 當酷幣要兌換成GP，或是遊戲勝利結算後匯出GP，GP 會直接上鏈，記錄於區塊鏈
 
 ## URL
 
