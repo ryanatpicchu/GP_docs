@@ -31,12 +31,12 @@
 
   * **JSON Body** 
  
-   {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795"}
+   {"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888"}
    
   * **HASH** 
  
  ```
-$message = '{"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795"}';
+$message = '{"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888"}';
 
 $secret_key = '<WILL PROVIDE LATER>';
 
@@ -74,7 +74,7 @@ hash_hmac('SHA256',  $message, $secret_key)
  
 ### Exchange
 
-用酷幣或記錄於iParking 的"中心化"GP 交換crypto GP。交換成功後，iParking 頁面上的GP 數量會消失，GP數量會在GP App 裡顯示
+用酷幣交換crypto GP。交換成功後，iParking 頁面上的GP 數量會增加
 
 * **URL**
 
@@ -88,7 +88,7 @@ hash_hmac('SHA256',  $message, $secret_key)
 
   * **JSON Body** 
 
-  	{"timestamp":1503383341514, "partnerId":"iparking", "partnerIp":"223.27.48.212", "userId":"886936630795", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e", "currency":"酷幣", "tokenAmount":10}
+  	{"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e", "currency":"GCoin", "tokenAmount":10}
  
  
   * **JSON Content:**
@@ -97,11 +97,10 @@ hash_hmac('SHA256',  $message, $secret_key)
     |:----------------|:---------|:---------|:-----------------------------------------------------------------|
     | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
     | partnerId       | Yes      | String   | iparking / gogogaie |
-    | partnerIp       | Yes      | String   | iparking / gogogaie 發出需求的主機IP 位址 (IPv4 或 IPv6) |
-    | userId          | Yes      | String   | iParking 用戶識別碼，暫定是手機號碼 |
+    | userId          | Yes      | String   | iParking 用戶識別碼，一般用戶是手機號碼，企業用戶為統編 |
     | accessToken     | Yes      | String   | API識別碼 |
-    | currency        | Yes      | String   | GP / 酷幣 |
-    | tokenAmount     | Yes      | Int      | GP / 酷幣數量 |
+    | currency        | Yes      | String   | GCoin （酷幣）|
+    | tokenAmount     | Yes      | Int      | GP |
   
 
 * **Success Response:**
@@ -114,6 +113,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | statusCode      | Yes      | Int      |  |
     | exchangedTokenAmount     | Yes      | Int | 兌換之相對應的GP數量 |
     | currency        | Yes      | String   | GP |
+    | transactionID   | Yes      | Int   |  |
 
 * **Sample Call:**
 
@@ -185,7 +185,7 @@ hash_hmac('SHA256',  $message, $secret_key)
 
   * **JSON Body** 
 
-    {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795", "txId":"0x4567ghjkmnb5678u8ubbhhd468nqffqfef", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e"}
+    {"timestamp":1503383341514, "partnerId":"iparking", "userId":"886936630795", "txId":"2", "accessToken":"375e3e418a45494c92bf1e6ec2f7460e"}
  
  
   * **JSON Content:**
