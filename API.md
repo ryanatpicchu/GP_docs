@@ -100,7 +100,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | userId          | Yes      | String   | iParking 用戶識別碼，一般用戶是手機號碼，企業用戶為統編 |
     | accessToken     | Yes      | String   | API識別碼 |
     | currency        | Yes      | String   | GCoin （酷幣）|
-    | tokenAmount     | Yes      | Int      | GP |
+    | tokenAmount     | Yes      | Int      | 欲兌換之GCoin (酷幣) 數量 |
   
 
 * **Success Response:**
