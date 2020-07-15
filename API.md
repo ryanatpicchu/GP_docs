@@ -98,6 +98,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
     | partnerId       | Yes      | String   | iparking / gogogaie |
     | userId          | Yes      | String   | iParking 用戶識別碼，一般用戶是手機號碼，企業用戶為統編 |
+    | userType        | Yes      | String   | 用戶類別：business/normal |
     | accessToken     | Yes      | String   | API識別碼 |
     | currency        | Yes      | String   | GCoin （酷幣）|
     | tokenAmount     | Yes      | Int      | 欲兌換之GCoin (酷幣) 數量 |
