@@ -31,12 +31,12 @@
 
   * **JSON Body** 
  
-   {"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888"}
+   {"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888", "userType":"business"}
    
   * **HASH** 
  
  ```
-$message = '{"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888"}';
+$message = '{"timestamp":1503383341514, "partnerId":"iparking", "userId":"66668888", "userType":"business"}';
 
 $secret_key = '<WILL PROVIDE LATER>';
 
@@ -52,6 +52,7 @@ hash_hmac('SHA256',  $message, $secret_key)
     | timestamp       | Yes      | Long     | 發出請求的時間戳，以毫秒為單位的 Epoch time(UTC milliseconds since 1/1/1970) |
     | partnerId       | Yes      | String   | iparking / gogogaie |
     | userId          | Yes      | String   | iParking 用戶識別碼，一般用戶是手機號碼，企業用戶為統編 |
+    | userType        | Yes      | String   | 用戶類別：business/normal |
 
 * **Success Response:**
 
